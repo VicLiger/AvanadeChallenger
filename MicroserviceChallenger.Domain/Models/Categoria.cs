@@ -12,7 +12,7 @@ namespace MicroserviceChallenger.Domain.Models
         private string _descricao;
         private ICollection<Produto> _produtos; 
 
-        public Guid ProdutoId { get; }
+        public Guid CategoriaId { get; }
         public string Nome => _nome;
         public string Descricao => _descricao;
         public IReadOnlyCollection<Produto> Produtos => _produtos.ToList().AsReadOnly();
@@ -23,7 +23,7 @@ namespace MicroserviceChallenger.Domain.Models
 
         public Categoria(string nome, string descricao, Produto produto)
         {
-            ProdutoId = Guid.NewGuid();
+            CategoriaId = Guid.NewGuid();
             CriadoEm = DateTime.UtcNow;
 
             AlterarNome(nome);
@@ -33,7 +33,7 @@ namespace MicroserviceChallenger.Domain.Models
 
         public Categoria(string nome, string descricao, IEnumerable<Produto> produtos)
         {
-            ProdutoId = Guid.NewGuid();
+            CategoriaId = Guid.NewGuid();
             CriadoEm = DateTime.UtcNow;
 
             AlterarNome(nome);
