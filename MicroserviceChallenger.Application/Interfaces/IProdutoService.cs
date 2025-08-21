@@ -12,7 +12,7 @@ namespace MicroserviceChallenger.Application.Interfaces
         Task AdicionarProduto(Produto produto);
         Task<IEnumerable<string>> ConsultarCatalogoProdutosQuantidade();
         Task AtualizarEstoque(Produto produto, int quantidadeComprada);
-
+        Task<bool> ValidarEstoque(Produto produto, int quantidadeDesejada);
 
 
     }
