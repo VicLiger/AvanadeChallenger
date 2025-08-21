@@ -28,7 +28,7 @@ namespace MicroserviceChallenger.Domain.Models
 
         public IEnumerable<Produto> BuscarPorCategoria(Guid categoriaId)
         {
-            return _produtosCatalogados.Where(p => p.Ativo && p.ProdutoId != Guid.Empty && p.CategoriaId == categoriaId);
+            return _produtosCatalogados.Where(p => p.Ativo && p.ProdutoId != Guid.Empty );
         }
 
         public IEnumerable<Produto> BuscarAtivos()
